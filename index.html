@@ -1,14 +1,54 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enrique Fernandez - Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <!-- Primary Meta Tags -->
+  <title>Enrique Fernandez | Desarrollador Backend & Cloud</title>
+  <meta name="title" content="Enrique Fernandez | Desarrollador Backend & Cloud" />
+  <meta name="description"
+    content="Desarrollador Backend especializado en Java, Spring Boot, microservicios y tecnologías cloud. Auxiliar de Docencia en UMSA y Co-fundador de Code Cat Studio (+780 miembros)." />
+  <meta name="keywords"
+    content="Enrique Fernandez, Backend Developer, Spring Boot, Java, Microservicios, AWS, NestJS, La Paz, Bolivia, Code Cat Studio" />
+  <meta name="author" content="Enrique Rafael Fernandez Chiri" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://enriquefernandez.dev/" />
+  <meta property="og:title" content="Enrique Fernandez | Desarrollador Backend & Cloud" />
+  <meta property="og:description"
+    content="Desarrollador Backend especializado en Java, Spring Boot, microservicios y tecnologías cloud. Co-fundador de Code Cat Studio (+780 miembros)." />
+  <meta property="og:image" content="https://enriquefernandez.dev/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Enrique Fernandez Portfolio" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://enriquefernandez.dev/" />
+  <meta property="twitter:title" content="Enrique Fernandez | Desarrollador Backend & Cloud" />
+  <meta property="twitter:description"
+    content="Desarrollador Backend especializado en Java, Spring Boot, microservicios y tecnologías cloud. Co-fundador de Code Cat Studio (+780 miembros)." />
+  <meta property="twitter:image" content="https://enriquefernandez.dev/og-image.png" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1a73e8" />
+  <meta name="msapplication-TileColor" content="#1a73e8" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Dark mode script -->
   <script>
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
@@ -18,8 +58,7 @@
   </script>
 </head>
 
-<body
-  className="bg-google-gray-50 dark:bg-google-gray-900 text-google-gray-900 dark:text-google-gray-100 font-sans antialiased transition-colors duration-300">
+<body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>

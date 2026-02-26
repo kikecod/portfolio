@@ -35,9 +35,10 @@ const skills: SkillCategory[] = [
 const certifications = [
     {
         name: "AWS Certified Cloud Practitioner",
-        status: "En curso",
-        date: "Examen programado: Feb 2026",
-        icon: "☁️"
+        status: "Certificado",
+        date: "Feb 2026",
+        icon: "☁️",
+        verifyUrl: "https://www.credly.com/badges/09ec0843-e688-44f7-b039-5896b04e21e8/public_url"
     }
 ];
 
@@ -157,23 +158,32 @@ const Skills = () => {
 
                     <div className="flex flex-wrap gap-4">
                         {certifications.map((cert, index) => (
-                            <div
+                            <a
                                 key={index}
-                                className="group flex items-center gap-4 px-6 py-4 rounded-2xl bg-gradient-to-r from-google-yellow/5 to-google-blue/5 dark:from-google-yellow/10 dark:to-google-blue/10 border border-google-gray-200 dark:border-google-gray-700 hover:shadow-google-hover dark:hover:shadow-dark-glow transition-all duration-300"
+                                href={cert.verifyUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center gap-4 px-6 py-4 rounded-2xl bg-gradient-to-r from-google-yellow/5 to-google-blue/5 dark:from-google-yellow/10 dark:to-google-blue/10 border border-google-gray-200 dark:border-google-gray-700 hover:shadow-google-hover dark:hover:shadow-dark-glow transition-all duration-300 cursor-pointer"
                             >
                                 <span className="text-3xl group-hover:scale-110 transition-transform duration-300">{cert.icon}</span>
                                 <div>
-                                    <h4 className="font-bold text-google-gray-900 dark:text-white">
+                                    <h4 className="font-bold text-google-gray-900 dark:text-white flex items-center gap-2">
                                         {cert.name}
+                                        <svg className="w-4 h-4 text-google-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
                                     </h4>
                                     <p className="text-sm text-google-gray-500 dark:text-google-gray-400">
                                         <span className="inline-flex items-center gap-1.5">
-                                            <span className="w-2 h-2 bg-google-yellow rounded-full animate-pulse"></span>
+                                            <span className="w-2 h-2 bg-google-green rounded-full"></span>
                                             {cert.status} • {cert.date}
                                         </span>
                                     </p>
                                 </div>
-                            </div>
+                                <svg className="w-5 h-5 text-google-gray-400 group-hover:text-google-blue transition-colors ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
                         ))}
                     </div>
                 </div>
